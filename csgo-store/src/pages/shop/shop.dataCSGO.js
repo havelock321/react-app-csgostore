@@ -9,7 +9,7 @@ const SHOP_DATA = [
       {
         id: 1,
         name: 'AK-47',
-        imageUrl: "\\images\\shop-img\\hats\\brown-brim.png",
+        imageUrl: "/images/shop-img/hats/blue-beanie.png",
         price: 25
       },
       {

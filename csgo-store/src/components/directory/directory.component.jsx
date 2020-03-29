@@ -9,36 +9,44 @@ class Directory extends React.Component {
     this.state = {
       sections: [
         {
-          title: "hats",
-          imageUrl: "https://i.ibb.co/cvpntL1/hats.png",
+          title: "rifles",
+          imageUrl:
+            "https://lh3.googleusercontent.com/proxy/6_pWyzi-UC6_pnQMXKiO2MAhpVSXsA-IofV041f_gwZS4CNKBf_TuQnWm_eBdkDo1d7q6KBfhxUDKzEBIVk5zj3v-r1TxvFK065L8l70rvg",
           id: 1,
-          linkUrl: "shop/hats"
+          linkUrl: "shop/rifles",
+          size: "large"
         },
         {
-          title: "jackets",
-          imageUrl: "https://i.ibb.co/px2tCc3/jackets.png",
+          title: "facas",
+          imageUrl:
+            "https://cutewallpaper.org/21/cs-go-knife-wallpaper/50-CS-GO-Knives-Wallpaper-on-WallpaperSafari.jpg",
           id: 2,
-          linkUrl: "shop/jackets"
+          linkUrl: "shop/facas",
+          size: "large"
         },
         {
-          title: "sneakers",
-          imageUrl: "https://i.ibb.co/0jqHpnp/sneakers.png",
+          title: "pistolas",
+          imageUrl:
+            "https://p4.wallpaperbetter.com/wallpaper/409/446/331/game-weapon-art-glock-18-wallpaper-preview.jpg",
           id: 3,
-          linkUrl: "shop/sneakers"
+          linkUrl: "shop/pistolas",
+          size: "large"
         },
         {
-          title: "womens",
-          imageUrl: "https://i.ibb.co/GCCdy8t/womens.png",
+          title: "terrorista",
+          imageUrl:
+            "https://www.csgo.com.cn/data/images/weapons_collection.jpg",
           size: "large",
           id: 4,
-          linkUrl: "shop/womens"
+          linkUrl: "shop/terror"
         },
         {
-          title: "mens",
-          imageUrl: "https://i.ibb.co/R70vBrQ/men.png",
+          title: "contra terrorista",
+          imageUrl:
+            "https://dmarket.com/blog/best-csgo-wallpapers/Nice-CS-GO-wallpaper-HD_hu9daf9fbbe6aa6f61f011d2b89d3e158b_1307082_1920x1080_resize_q90_box.jpg",
           size: "large",
           id: 5,
-          linkUrl: "shop/mens"
+          linkUrl: "shop/ct"
         }
       ]
     };
@@ -46,7 +54,7 @@ class Directory extends React.Component {
   render() {
     return (
       <div className="directory-menu">
-        {this.state.sections.map(({id, ...otherSectionProps }) => (
+        {this.state.sections.map(({ id, ...otherSectionProps }) => (
           <MenuItem key={id} {...otherSectionProps} />
         ))}
       </div>
