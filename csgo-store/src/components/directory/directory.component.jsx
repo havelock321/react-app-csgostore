@@ -11,7 +11,7 @@ class Directory extends React.Component {
         {
           title: "rifles",
           imageUrl:
-            "https://lh3.googleusercontent.com/proxy/6_pWyzi-UC6_pnQMXKiO2MAhpVSXsA-IofV041f_gwZS4CNKBf_TuQnWm_eBdkDo1d7q6KBfhxUDKzEBIVk5zj3v-r1TxvFK065L8l70rvg",
+            "https://images7.alphacoders.com/920/920168.jpg",
           id: 1,
           linkUrl: "shop/rifles",
           size: "large"
