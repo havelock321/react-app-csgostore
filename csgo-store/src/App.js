@@ -7,7 +7,7 @@ import SignInAndSignUpPage from "./components/sign-and-signup/sign-in-and-sign-u
 import NavBar from "./components/nav-bar/nav-bar.component";
 import { Switch, Route } from "react-router-dom";
 import ShopPage from "./pages/shop/shop.component";
-import { auth } from "./firebase/firebase.utils";
+import { auth, createUserProfileDocument } from "./firebase/firebase.utils";
 
 class App extends React.Component {
   constructor() {
@@ -16,13 +16,21 @@ class App extends React.Component {
       currentUser: null
     };
   }
- 
-  unsubscribeFormAuth = null;
 
   componentDidMount() {
-    this.unsubscribeFormAuthv = auth.onAuthStateChanged(user => {
-      this.setState({ currentUser: user });
-      console.log(user);
+    this.unsubscribeFormAuthv = auth.onAuthStateChanged(async userAuth => {
+      if (userAuth) {
+        const userRef = await createUserProfileDocument(userAuth);
+        userRef.onSnapshot(snapShot => {
+          this.setState({
+            currentUser: {
+              id: snapShot.id,
+              ...snapShot.data()
+            }
+          });
+        });
+      }
+      this.setState({ currentUser: userAuth });
     });
   }
 
@@ -37,7 +45,7 @@ class App extends React.Component {
         <Switch>
           <Route exact path="/" component={HomePage}></Route>
           <Route exact path="/shop" component={ShopPage}></Route>
-          <Route exact path="/signin" component={SignInAndSignUpPage}></Route>
+          <Route exact path="/sign" component={SignInAndSignUpPage}></Route>
         </Switch>
       </div>
     );

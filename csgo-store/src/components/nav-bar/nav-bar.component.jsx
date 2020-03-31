@@ -2,11 +2,10 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "./nav-bar.styless.scss";
 import { ReactComponent as Logo } from "../../assets/icons8-counter-strike.svg";
-import { ReactComponent as Cog } from "../../assets/svg/cog.svg";
+import { ReactComponent as Cog } from "../../assets/svg/user-secret.svg";
 import { ReactComponent as Shop } from "../../assets/svg/shopping-cart.svg";
 import { ReactComponent as Contact } from "../../assets/svg/phone.svg";
-import { ReactComponent as SigIn } from "../../assets/svg/sign-in.svg";
-import { ReactComponent as SigOut } from "../../assets/svg/backward.svg";
+import { ReactComponent as User } from "../../assets/svg/user-circle-o.svg";
 
 import { auth } from "./../../firebase/firebase.utils";
 
@@ -26,7 +25,19 @@ const NavBar = ({ currentUser }) => (
           </div>
         ) : null}
       </li>
-
+      <li className="nav-item">
+        {currentUser ? (
+          <Link to="/profile" className="nav-link">
+            <User />
+            <span className="link-text">My Profile</span>
+          </Link>
+        ) : (
+          <Link to="/sign" className="nav-link">
+            <User />
+            <span className="link-text">Sign</span>
+          </Link>
+        )}
+      </li>
       <li className="nav-item">
         <Link to="/shop" className="nav-link">
           <Shop />
@@ -39,13 +50,14 @@ const NavBar = ({ currentUser }) => (
           <span className="link-text">Contact</span>
         </Link>
       </li>
-
+      {currentUser ? (
       <li className="nav-item" onClick={() => auth.signOut()}>
-        <Link to="/shop" className="nav-link">
+        <Link to="/" className="nav-link">
           <Cog />
-          <span className="link-text">Settings</span>
+          <span className="link-text">Exit</span>
         </Link>
-      </li>
+      </li>) : null
+      }
     </ul>
   </nav>
 );

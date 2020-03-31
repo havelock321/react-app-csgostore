@@ -4,7 +4,7 @@
   --text-secondary: #ececec;
   --bg-primary: #222f3e;
   --bg-secondary: #222229;
-  --transition-speed: 800ms;
+  --transition-speed: 550ms;
   --transition-nav-speed: 800ms;
 }
 
@@ -32,7 +32,7 @@ main {
 .navbar {
   position: fixed;
   background-color: var(--bg-primary);
-  transition: width 1000ms ease;
+  transition: width 550ms ease;
   overflow: hidden;
   z-index: 10000;
 }
@@ -141,7 +141,7 @@ main {
 }
 
 .navbar:hover .logo svg {
-  transform: rotate(360deg);
+  //transform: rotateY(360)
 }
 
 .navbar:hover .user-profile {
