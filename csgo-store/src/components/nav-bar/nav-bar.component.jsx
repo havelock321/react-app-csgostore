@@ -6,8 +6,11 @@ import { ReactComponent as Cog } from "../../assets/svg/cog.svg";
 import { ReactComponent as Shop } from "../../assets/svg/shopping-cart.svg";
 import { ReactComponent as Contact } from "../../assets/svg/phone.svg";
 import { ReactComponent as SigIn } from "../../assets/svg/sign-in.svg";
+import { ReactComponent as SigOut } from "../../assets/svg/backward.svg";
 
-const NavBar = () => (
+import { auth } from "./../../firebase/firebase.utils";
+
+const NavBar = ({ currentUser }) => (
   <nav className="navbar">
     <ul className="navbar-nav">
       <li className="logo">
@@ -15,7 +18,15 @@ const NavBar = () => (
           <span className="link-text logo-text">CSGO Store</span>
           <Logo className="logo" />
         </Link>
+        {currentUser ? (
+          <div className="user-profile">
+            <div className="user-name link-text userinfo-text">
+              {currentUser.displayName}
+            </div>
+          </div>
+        ) : null}
       </li>
+
       <li className="nav-item">
         <Link to="/shop" className="nav-link">
           <Shop />
@@ -28,14 +39,8 @@ const NavBar = () => (
           <span className="link-text">Contact</span>
         </Link>
       </li>
-      <li className="nav-item">
-        <Link to="/signin" className="nav-link">
-          <SigIn />
-          <span className="link-text">Sign</span>
-        </Link>
-      </li>
 
-      <li className="nav-item">
+      <li className="nav-item" onClick={() => auth.signOut()}>
         <Link to="/shop" className="nav-link">
           <Cog />
           <span className="link-text">Settings</span>

@@ -1,21 +1,24 @@
-.sign-in{
-    margin-left: 170px;
-    width: 30vw;
+.sign-in {
+  margin-left: 170px;
+  width: 30vw;
+  display: flex;
+  flex-direction: column;
+
+  .title {
+    margin: 10px 0;
+  }
+
+  .buttons {
     display: flex;
-    flex-direction: column;
-
-    .title{
-        margin: 10px 0;
-    }
+    justify-content: space-between;
+  }
 }
-
 
 /* Small screens */
 @media only screen and (max-width: 600px) {
-    .sign-in{
-        margin-left: 10px;
-        margin-right: 10px;
-        width: 100vw;
-    }
-    
+  .sign-in {
+    margin-left: 10px;
+    margin-right: 10px;
+    width: 100vw;
+  }
 }
