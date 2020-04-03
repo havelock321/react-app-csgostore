@@ -28,3 +28,12 @@
     }
   }
 }
+
+@media only screen and (max-width: 600px) {
+  .custom-button {
+    width: 100%;
+  }
+  &.google-sign-in {
+    width: 100%;
+  }
+}

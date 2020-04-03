@@ -9,3 +9,15 @@
     margin: 10px 0;
   }
 }
+
+
+/* Small screens */
+@media only screen and (max-width: 600px) {
+  .sign-up {
+  
+    width: 100vw;
+    border: 1px solid white;
+    padding: 20px;
+    margin-top: 13px;
+  }
+}

@@ -2,5 +2,11 @@
   display: flex;
   justify-content: space-evenly;
   margin-top: 13px;
+}
 
+@media only screen and (max-width: 600px) {
+  .sign-in-and-signup {
+    display: block;
+    margin-top: 13px;
+  }
 }
