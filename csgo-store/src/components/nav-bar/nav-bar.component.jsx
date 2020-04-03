@@ -6,7 +6,7 @@ import { ReactComponent as Cog } from "../../assets/svg/user-secret.svg";
 import { ReactComponent as Shop } from "../../assets/svg/shopping-cart.svg";
 import { ReactComponent as Contact } from "../../assets/svg/phone.svg";
 import { ReactComponent as User } from "../../assets/svg/user-circle-o.svg";
-
+import { connect } from "react-redux";
 import { auth } from "./../../firebase/firebase.utils";
 
 const NavBar = ({ currentUser }) => (
@@ -51,15 +51,19 @@ const NavBar = ({ currentUser }) => (
         </Link>
       </li>
       {currentUser ? (
-      <li className="nav-item" onClick={() => auth.signOut()}>
-        <Link to="/" className="nav-link">
-          <Cog />
-          <span className="link-text">Exit</span>
-        </Link>
-      </li>) : null
-      }
+        <li className="nav-item" onClick={() => auth.signOut()}>
+          <Link to="/" className="nav-link">
+            <Cog />
+            <span className="link-text">Exit</span>
+          </Link>
+        </li>
+      ) : null}
     </ul>
   </nav>
 );
 
-export default NavBar;
+const mapStateToProps = state => ({
+  currentUser: state.user.currentUser
+});
+
+export default connect(mapStateToProps)(NavBar);

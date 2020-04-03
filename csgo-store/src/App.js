@@ -8,29 +8,28 @@ import NavBar from "./components/nav-bar/nav-bar.component";
 import { Switch, Route } from "react-router-dom";
 import ShopPage from "./pages/shop/shop.component";
 import { auth, createUserProfileDocument } from "./firebase/firebase.utils";
+import { connect } from "react-redux";
+import { setCurretUser } from "./redux/user/user.actions";
 
 class App extends React.Component {
   constructor() {
     super();
-    this.state = {
-      currentUser: null
-    };
   }
 
   componentDidMount() {
+    const { setCurretUser } = this.props;
+
     this.unsubscribeFormAuthv = auth.onAuthStateChanged(async userAuth => {
       if (userAuth) {
         const userRef = await createUserProfileDocument(userAuth);
         userRef.onSnapshot(snapShot => {
-          this.setState({
-            currentUser: {
-              id: snapShot.id,
-              ...snapShot.data()
-            }
+          setCurretUser({
+            id: snapShot.id,
+            ...snapShot.data()
           });
         });
       }
-      this.setState({ currentUser: userAuth });
+      setCurretUser(userAuth);
     });
   }
 
@@ -41,7 +40,7 @@ class App extends React.Component {
   render() {
     return (
       <div className="App">
-        <NavBar currentUser={this.state.currentUser} />
+        <NavBar />
         <Switch>
           <Route exact path="/" component={HomePage}></Route>
           <Route exact path="/shop" component={ShopPage}></Route>
@@ -51,5 +50,8 @@ class App extends React.Component {
     );
   }
 }
+const mapDispatchToProps = dispatch => ({
+  setCurretUser: user => dispatch(setCurretUser(user))
+});
 
-export default App;
+export default connect(null, mapDispatchToProps)(App);
