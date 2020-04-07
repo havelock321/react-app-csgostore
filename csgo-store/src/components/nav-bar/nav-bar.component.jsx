@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, Redirect } from "react-router-dom";
 import "./nav-bar.styless.scss";
 import { ReactComponent as Logo } from "../../assets/icons8-counter-strike.svg";
 import { ReactComponent as Cog } from "../../assets/svg/user-secret.svg";
