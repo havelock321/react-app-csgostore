@@ -24,6 +24,11 @@
     margin-top: auto;
     cursor: pointer;
   }
+
+  .empty-message{
+    font-size: 18px;
+    margin: 50px auto;
+  }
   
 }
 
@@ -32,7 +37,7 @@
 }
 
 .cart-items::-webkit-scrollbar-track {
-  background: #000;
+  background: #222f3e;
 }
 
 .cart-items::-webkit-scrollbar-thumb {

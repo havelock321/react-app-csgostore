@@ -8,6 +8,7 @@ import { ReactComponent as Contact } from "../../assets/svg/phone.svg";
 import { ReactComponent as User } from "../../assets/svg/user-circle-o.svg";
 import { connect } from "react-redux";
 import { auth } from "./../../firebase/firebase.utils";
+import { selectCurrentUser } from "../../redux/user/user.selector";
 
 const NavBar = ({ currentUser }) => (
   <nav className="navbar">
@@ -62,8 +63,8 @@ const NavBar = ({ currentUser }) => (
   </nav>
 );
 
-const mapStateToProps = state => ({
-  currentUser: state.user.currentUser
+const mapStateToProps = (state) => ({
+  currentUser: selectCurrentUser(state),
 });
 
 export default connect(mapStateToProps)(NavBar);
