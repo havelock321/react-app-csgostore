@@ -10,91 +10,25 @@ import HATGUY from "../../pages/shop/cs images/CHAR04.png";
 import ANTHATGUY from "../../pages/shop/cs images/CHAR05.png";
 
 /* RIFLES*/
-import AK47 from "../../pages/shop/cs images/MAMBA.gif";
-import AWP from "../../pages/shop/cs images/SCOPE.gif";
+import M4A1S from "../../pages/shop/cs images/MA41_SILENCER.gif";
+import M4A1 from "../../pages/shop/cs images/M4A1.gif";
 import AWP02 from "../../pages/shop/cs images/AWP02.gif";
 import P90 from "../../pages/shop/cs images/MP5.gif";
 
 /* KNIFES*/
-import KNIFE00 from "../../pages/shop/cs images/KNIFESHOW.gif";
 import KNIFE01 from "../../pages/shop/cs images/butterfly.gif";
 import KNIFE02 from "../../pages/shop/cs images/VANILLA.gif";
 import KNIFE03 from "../../pages/shop/cs images/KARAMBIT.gif";
 import KNIFE04 from "../../pages/shop/cs images/butterflydual.gif";
 
-//import KNIFE01 from "../../pages/shop/cs images/KARAMBIT.png";
-//import KNIFE02 from "../../pages/shop/cs images/KNIFE02.png";
-//import KNIFE03 from "../../pages/shop/cs images/KNIFE03.png";
+
+/* PISTOL*/
+import PISTOL01 from "../../pages/shop/cs images/PISTOL.gif";
+import PISTOL02 from "../../pages/shop/cs images/PISTOLDUAL.gif";
+import PISTOL03 from "../../pages/shop/cs images/SCOUTPISTOL.gif";
+import PISTOL04 from "../../pages/shop/cs images/PISTOLSHOW.gif";
 
 const SHOP_DATA = {
-  rifles: {
-    id: 1,
-    title: "RIFLES",
-    routeName: "rifles",
-    items: [
-      {
-        id: 1,
-        name: "PRO AWP SCOPE",
-        imageUrl: AWP,
-        price: 3000,
-      },
-      {
-        id: 2,
-        name: "GREY SOUCT",
-        imageUrl: AWP02,
-        price: 300,
-      },
-      {
-        id: 3,
-        name: "AK 47 CLASSIC",
-        imageUrl: AK47,
-        price: 300,
-      },
-      {
-        id: 4,
-        name: "MP5",
-        imageUrl: P90,
-        price: 300,
-      },
-    ],
-  },
-  knifes: {
-    id: 2,
-    title: "KNIFES",
-    routeName: "knifes",
-    items: [
-      {
-        id: 5,
-        name: "Karambit",
-        imageUrl: KNIFE03,
-        price: 800,
-      },
-      {
-        id: 6,
-        name: "Butterfly",
-        imageUrl: KNIFE01,
-        price: 800,
-      },
-      {
-        id: 7,
-        name: "Vanilla",
-        imageUrl: KNIFE02,
-        price: 800,
-      },
-      {
-        id: 8,
-        name: "Butterfly Dual",
-        imageUrl: KNIFE04,
-        price: 800,
-      },
-    ],
-  },
-  pistols: {
-    id: 3,
-    title: "PISTOLS",
-    routeName: "pistols",
-    items: [],
-  },
   ct: {
     id: 5,
     title: "Global Risk",
@@ -161,6 +95,99 @@ const SHOP_DATA = {
       },
     ],
   },
+  rifles: {
+    id: 1,
+    title: "RIFLES",
+    routeName: "rifles",
+    items: [
+      {
+        id: 1,
+        name: "M4A1 CSGO",
+        imageUrl: M4A1,
+        price: 3000,
+      },
+      {
+        id: 2,
+        name: "GREY SOUCT",
+        imageUrl: AWP02,
+        price: 300,
+      },
+      {
+        id: 3,
+        name: "M4A1 SILENCER",
+        imageUrl: M4A1S,
+        price: 300,
+      },
+      {
+        id: 4,
+        name: "MP5",
+        imageUrl: P90,
+        price: 300,
+      },
+    ],
+  },
+  knifes: {
+    id: 2,
+    title: "KNIFES",
+    routeName: "knifes",
+    items: [
+      {
+        id: 5,
+        name: "Karambit",
+        imageUrl: KNIFE03,
+        price: 800,
+      },
+      {
+        id: 6,
+        name: "Butterfly",
+        imageUrl: KNIFE01,
+        price: 800,
+      },
+      {
+        id: 7,
+        name: "Vanilla",
+        imageUrl: KNIFE02,
+        price: 800,
+      },
+      {
+        id: 8,
+        name: "Butterfly Dual",
+        imageUrl: KNIFE04,
+        price: 800,
+      },
+    ],
+  },
+  pistols: {
+    id: 3,
+    title: "PISTOLS",
+    routeName: "pistols",
+    items: [
+      {
+        id: 35,
+        name: "GLOCK F",
+        imageUrl: PISTOL01,
+        price: 300,
+      },
+      {
+        id: 34,
+        name: "DUAL EAGLE",
+        imageUrl: PISTOL02,
+        price: 300,
+      },
+      {
+        id: 36,
+        name: "SCOUT",
+        imageUrl: PISTOL03,
+        price: 300,
+      },
+      {
+        id: 37,
+        name: "GLOBK",
+        imageUrl: PISTOL04,
+        price: 300,
+      }
+    ],
+  }
 };
 
 export default SHOP_DATA;

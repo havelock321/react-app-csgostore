@@ -28,9 +28,9 @@ const NavBar = ({ currentUser }) => (
       </li>
       <li className="nav-item">
         {currentUser ? (
-          <Link to="/profile" className="nav-link">
-            <User />
-            <span className="link-text">My Profile</span>
+          <Link to="/shop" className="nav-link">
+            <Shop />
+            <span className="link-text">Shop</span>
           </Link>
         ) : (
           <Link to="/sign" className="nav-link">
@@ -40,13 +40,7 @@ const NavBar = ({ currentUser }) => (
         )}
       </li>
       <li className="nav-item">
-        <Link to="/shop" className="nav-link">
-          <Shop />
-          <span className="link-text">Shop</span>
-        </Link>
-      </li>
-      <li className="nav-item">
-        <Link to="/shop" className="nav-link">
+        <Link to="/contact" className="nav-link">
           <Contact />
           <span className="link-text">Contact</span>
         </Link>

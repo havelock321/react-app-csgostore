@@ -2,15 +2,10 @@
   width: 22vw;
   display: flex;
   flex-direction: column;
-  height: 22vw;
+  height: 350px;
   align-items: center;
   position: relative;
-  border-right: 1px solid;
-  border-top: 1px solid;
-  border-bottom: 1px solid;
-  cursor: pointer;
   background: radial-gradient(black, transparent) !important;
-  border-radius: 50px 20px;
   overflow: hidden;
 
   &:hover {

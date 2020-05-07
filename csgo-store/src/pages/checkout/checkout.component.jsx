@@ -3,6 +3,7 @@ import "./checkout.styless.scss";
 import { connect } from "react-redux";
 import { createStructuredSelector } from "reselect";
 import CheckoutItem from "../../components/checkout-item/checkout-item.component";
+import CustomButton from "../../components/custom-button/custom-button.component";
 
 import {
   selectCartItems,
@@ -31,9 +32,11 @@ const CheckoutPage = ({ cartItems, total }) => (
     {cartItems.map((cartItem) => (
       <CheckoutItem cartItem={cartItem} key={cartItem.id} />
     ))}
-
     <div className="total">
       <span>TOTAL: ${total}</span>
+    </div>
+    <div className="paynow">
+      <CustomButton> PAY NOW </CustomButton>
     </div>
   </div>
 );
