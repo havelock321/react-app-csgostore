@@ -9,11 +9,20 @@ import REBEL from "../../pages/shop/cs images/CHAR06.png";
 import HATGUY from "../../pages/shop/cs images/CHAR04.png";
 import ANTHATGUY from "../../pages/shop/cs images/CHAR05.png";
 
-/* KNIFES*/
-import KNIFE00 from "../../pages/shop/cs images/KNIFE01.png";
-import AK47 from "../../pages/shop/cs images/AK47.png";
+/* RIFLES*/
+import AK47 from "../../pages/shop/cs images/MAMBA.gif";
+import AWP from "../../pages/shop/cs images/SCOPE.gif";
+import AWP02 from "../../pages/shop/cs images/AWP02.gif";
+import P90 from "../../pages/shop/cs images/MP5.gif";
 
-//import KNIFE01 from "../../pages/shop/cs images/KNIFE01.png";
+/* KNIFES*/
+import KNIFE00 from "../../pages/shop/cs images/KNIFESHOW.gif";
+import KNIFE01 from "../../pages/shop/cs images/butterfly.gif";
+import KNIFE02 from "../../pages/shop/cs images/VANILLA.gif";
+import KNIFE03 from "../../pages/shop/cs images/KARAMBIT.gif";
+import KNIFE04 from "../../pages/shop/cs images/butterflydual.gif";
+
+//import KNIFE01 from "../../pages/shop/cs images/KARAMBIT.png";
 //import KNIFE02 from "../../pages/shop/cs images/KNIFE02.png";
 //import KNIFE03 from "../../pages/shop/cs images/KNIFE03.png";
 
@@ -25,26 +34,26 @@ const SHOP_DATA = {
     items: [
       {
         id: 1,
-        name: "AK 47 PIXEL ",
-        imageUrl: AK47,
-        price: 300,
+        name: "PRO AWP SCOPE",
+        imageUrl: AWP,
+        price: 3000,
       },
       {
         id: 2,
-        name: "AK 47 PIXEL",
-        imageUrl: AK47,
+        name: "GREY SOUCT",
+        imageUrl: AWP02,
         price: 300,
       },
       {
         id: 3,
-        name: "AK 47 PIXEL ",
+        name: "AK 47 CLASSIC",
         imageUrl: AK47,
         price: 300,
       },
       {
         id: 4,
-        name: "AK 47 PIXEL ",
-        imageUrl: AK47,
+        name: "MP5",
+        imageUrl: P90,
         price: 300,
       },
     ],
@@ -55,27 +64,27 @@ const SHOP_DATA = {
     routeName: "knifes",
     items: [
       {
-        id: 1,
-        name: "Pretty knife",
-        imageUrl: KNIFE00,
+        id: 5,
+        name: "Karambit",
+        imageUrl: KNIFE03,
         price: 800,
       },
       {
-        id: 1,
-        name: "Pretty knife",
-        imageUrl: KNIFE00,
+        id: 6,
+        name: "Butterfly",
+        imageUrl: KNIFE01,
         price: 800,
       },
       {
-        id: 1,
-        name: "Ricksaw’s",
-        imageUrl: KNIFE00,
+        id: 7,
+        name: "Vanilla",
+        imageUrl: KNIFE02,
         price: 800,
       },
       {
-        id: 1,
-        name: "Ricksaw’s",
-        imageUrl: KNIFE00,
+        id: 8,
+        name: "Butterfly Dual",
+        imageUrl: KNIFE04,
         price: 800,
       },
     ],
@@ -92,25 +101,25 @@ const SHOP_DATA = {
     routeName: "ct",
     items: [
       {
-        id: 1,
+        id: 9,
         name: "Ricksaw’s",
         imageUrl: RICK,
         price: 800,
       },
       {
-        id: 2,
+        id: 10,
         name: "Buckshot",
         imageUrl: BUCK,
         price: 710,
       },
       {
-        id: 3,
+        id:11,
         name: "FBI",
         imageUrl: FBI,
         price: 352,
       },
       {
-        id: 4,
+        id: 12,
         name: "Seal Team 6",
         imageUrl: SEAL,
         price: 257,
@@ -123,28 +132,28 @@ const SHOP_DATA = {
     routeName: "tr",
     items: [
       {
-        id: 5,
+        id: 13,
         name: "The Doctor",
         imageUrl: DOCTOR,
         price: 250,
         isRifle: true,
       },
       {
-        id: 6,
+        id: 14,
         name: "REBEL",
         imageUrl: REBEL,
         price: 100,
         isRifle: true,
       },
       {
-        id: 7,
+        id: 15,
         name: "NO HAT GUY",
         imageUrl: HATGUY,
         price: 500,
         isRifle: true,
       },
       {
-        id: 8,
+        id: 16,
         name: "THE HAT GUY ",
         imageUrl: ANTHATGUY,
         price: 200,

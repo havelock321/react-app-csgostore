@@ -2,7 +2,7 @@
   width: 22vw;
   display: flex;
   flex-direction: column;
-  height: 350px;
+  height: 22vw;
   align-items: center;
   position: relative;
   border-right: 1px solid;
@@ -14,6 +14,10 @@
   overflow: hidden;
 
   &:hover {
+    -webkit-box-shadow: 4px -5px 35px 17px #222f3e;
+    -moz-box-shadow: 4px -5px 35px 17px #222f3e;
+    box-shadow: 4px -5px 35px 17px #222f3e;
+
     & .image {
       transform: scale(1.1);
       transition: transform 6s cubic-bezier(0.25, 0.45, 0.45, 0.95);
