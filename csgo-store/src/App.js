@@ -7,6 +7,7 @@ import CustomFloatButton from "./components/custom-float-button/custom-float-but
 import { Switch, Route, Redirect } from "react-router-dom";
 import ShopPage from "./pages/shop/shop.component";
 import HomePage from "./pages/homepage/homepage.component";
+import ContactPage from "./pages/contact/contact.component";
 import CheckoutPage from "./pages/checkout/checkout.component";
 import { auth, createUserProfileDocument } from "./firebase/firebase.utils";
 import { connect } from "react-redux";
@@ -45,6 +46,7 @@ class App extends React.Component {
         <NavBar />
         <CustomFloatButton />
         <Switch>
+          <Route exact path="/contact" component={ContactPage}></Route>
           <Route exact path="/" component={HomePage}></Route>
           <Route path="/shop" component={ShopPage}></Route>
           <Route exact path="/checkout" component={CheckoutPage}></Route>
