@@ -8,12 +8,13 @@ const ContactPage = () => {
     <div className="contact-page ">
       <div className="about ">
         <div className="me-item">
-          <img className="image" src={me} />
+          <img className="image" src={me} alt="its me" />
           <span>Solution Architect / Developer</span>
           <div className="buttons">
             <CustomButton>
               <a
                 target="_blank"
+                rel="noopener noreferrer" 
                 href="https://www.linkedin.com/in/leonardo-silva-15433a89/"
               >
                 TO CONTACT CLICK HERE
@@ -22,6 +23,7 @@ const ContactPage = () => {
             <CustomButton>
               <a
                 target="_blank"
+                rel="noopener noreferrer" 
                 href="https://github.com/lersilva/react-app-csgostore
                 "
               >

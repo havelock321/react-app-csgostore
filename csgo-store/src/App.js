@@ -1,5 +1,4 @@
 import React from "react";
-import logo from "./logo.svg";
 import "./App.css";
 import SignInAndSignUpPage from "./components/sign-and-signup/sign-in-and-sign-up.comonent";
 import NavBar from "./components/nav-bar/nav-bar.component";
@@ -15,9 +14,7 @@ import { setCurretUser } from "./redux/user/user.actions";
 import { selectCurrentUser } from "./redux/user/user.selector";
 
 class App extends React.Component {
-  constructor() {
-    super();
-  }
+ 
 
   componentDidMount() {
     const { setCurretUser } = this.props;
